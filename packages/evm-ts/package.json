@@ -1,0 +1,25 @@
+{
+  "name": "evm-ts",
+  "description": "Simple Implementation of Ethereum Virtual Machine in TypeScript",
+  "version": "0.0.1",
+  "type": "module",
+  "sideEffects": false,
+  "keywords": ["eth", "ethereum", "dapps", "wallet", "web3", "typescript", "evm", "blockchain"],
+  "author": "inaridiy.eth",
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "typescript": ">=5.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:types": "tsc --project tsconfig.build.json --declaration --declarationMap --emitDeclarationOnly",
+    "build:esm": "tsx build.ts",
+    "build": "pnpm run build:esm && pnpm run build:types"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  }
+}
